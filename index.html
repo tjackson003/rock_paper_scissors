@@ -41,6 +41,48 @@
         //             return "Scissors absolutely decapitate paper! YOU WIN!";
         //     }
         // }
+
+        function computerPlay() {
+            const choice = ["rock", "paper", "scissors"];
+            return choice[Math.floor(Math.random()*choice.length)];
+        };
+
+        function playRound(playerSelection, computerSelection) {
+            var playerSelection = prompt("Choose: Rock, Paper, or Scissors").toLowerCase();
+            const computerSelection = computerPlay();
+            switch (playerSelection + computerSelection) {
+                case "rockrock":
+                    return "Hey, it's a draw! Play again!";
+                    break;
+                case "rockpaper":
+                    return "Sorry! Paper beat rock, you lose!";
+                    break;
+                case "rockscissors":
+                    return "Rock crushes scissors! YOU WIN!";
+                    break;
+                case "paperpaper":
+                    return "Hey, it's a draw! Play again!";
+                    break;
+                case "paperscissors":
+                    return "Woah! Scissors cut paper, you lose!";
+                    break;
+                case "paperrock":
+                    return "Oh my goodness. Paper covers rock...YOU WIN!";
+                    break;
+                case "scissorsscissors":
+                    return "Hey, it's a draw! Play again!";
+                    break;
+                case "scissorsrock":
+                    return "Scissors stand no chance against the mighty rock! You lose!";
+                    break;
+                case "scissorspaper":
+                    return "Scissors absolutely decapitate paper! YOU WIN!";
+                    break;
+                default:
+                    console.log("Something went wrong.");
+            }
+
+        }
     </script>
 </body>
 </html>
