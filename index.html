@@ -8,6 +8,9 @@
 </head>
 <body>
     <script>
+
+        // OLD RPS CODE
+
         // function computerPlay() {
         //     var choiceArray = ['rock', 'paper', 'scissors'];
         //     return choiceArray[Math.floor(Math.random()*choiceArray.length)];
@@ -42,47 +45,78 @@
         //     }
         // }
 
-        function computerPlay() {
-            const choice = ["rock", "paper", "scissors"];
-            return choice[Math.floor(Math.random()*choice.length)];
-        };
+        // ACTUAL CODE FOR RPS GAME BELOW
 
-        function playRound(playerSelection, computerSelection) {
-            var playerSelection = prompt("Choose: Rock, Paper, or Scissors").toLowerCase();
-            const computerSelection = computerPlay();
-            switch (playerSelection + computerSelection) {
-                case "rockrock":
-                    return "Hey, it's a draw! Play again!";
-                    break;
-                case "rockpaper":
-                    return "Sorry! Paper beat rock, you lose!";
-                    break;
-                case "rockscissors":
-                    return "Rock crushes scissors! YOU WIN!";
-                    break;
-                case "paperpaper":
-                    return "Hey, it's a draw! Play again!";
-                    break;
-                case "paperscissors":
-                    return "Woah! Scissors cut paper, you lose!";
-                    break;
-                case "paperrock":
-                    return "Oh my goodness. Paper covers rock...YOU WIN!";
-                    break;
-                case "scissorsscissors":
-                    return "Hey, it's a draw! Play again!";
-                    break;
-                case "scissorsrock":
-                    return "Scissors stand no chance against the mighty rock! You lose!";
-                    break;
-                case "scissorspaper":
-                    return "Scissors absolutely decapitate paper! YOU WIN!";
-                    break;
-                default:
-                    console.log("Something went wrong.");
-            }
+        // function computerPlay() {
+        //     const choice = ["rock", "paper", "scissors"];
+        //     return choice[Math.floor(Math.random()*choice.length)];
+        // };
 
-        }
+        // function playRound(playerSelection, computerSelection) {
+        //     var playerSelection = prompt("Choose: Rock, Paper, or Scissors").toLowerCase();
+        //     var computerSelection = computerPlay();
+        //     switch (playerSelection + computerSelection) {
+        //         case "rockrock":
+        //             return "Hey, it's a draw! Play again!";
+        //             break;
+        //         case "rockpaper":
+        //             return "Sorry! Paper beat rock, you lose!";
+        //             break;
+        //         case "rockscissors":
+        //             return "Rock crushes scissors! YOU WIN!";
+        //             break;
+        //         case "paperpaper":
+        //             return "Hey, it's a draw! Play again!";
+        //             break;
+        //         case "paperscissors":
+        //             return "Woah! Scissors cut paper, you lose!";
+        //             break;
+        //         case "paperrock":
+        //             return "Oh my goodness. Paper covers rock...YOU WIN!";
+        //             break;
+        //         case "scissorsscissors":
+        //             return "Hey, it's a draw! Play again!";
+        //             break;
+        //         case "scissorsrock":
+        //             return "Scissors stand no chance against the mighty rock! You lose!";
+        //             break;
+        //         case "scissorspaper":
+        //             return "Scissors absolutely decapitate paper! YOU WIN!";
+        //             break;
+        //         default:
+        //             console.log("Something went wrong.");
+        //     }
+
+        // }
+
+        // function  game() {
+        //     let playerScore = 0;
+        //     let computerScore = 0;
+        //     let tieScore = 0;
+        //     let message = "";
+
+        //     for (var i=1; i<=5; i++) {
+        //         var result = playRound(playerSelection, computerSelection);
+        //         console.log("Round " + i + ": " + result);
+
+        //         if(result.includes("WIN")) {
+        //             playerScore += 1;
+        //         } else if(result.includes("lose")) {
+        //             computerScore += 1;
+        //         } else {
+        //             tieScore += 1;
+        //         }
+
+        //         if(playerScore > computerScore) {
+        //             message = "Congratulations! You win the game!";
+        //         } else if(playerScore < computerScore) {
+        //             message = "Tough break, you lose. Try again.";
+        //         } else {
+        //             message = "Woah, it's a tie! Try again!";
+        //         }
+        //     }
+        //     console.log("Your score: " + playerScore + "\nComputer score: " + computerScore + "\nTies: " + tieScore + "\n" + message);
+        // }
     </script>
 </body>
 </html>
