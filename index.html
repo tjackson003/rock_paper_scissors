@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>RPS 2018</title>
 </head>
 <body>
-    <script>
+
+    <header>
+        <h1>RPS 2018</h1>
+    </header>
+
+    <div class="scoreBoard">
+        <div id="playerPlate" class="plate">Player</div>
+        <div id="compPlate" class="plate">CPU</div>
+        <span id="userScore">0</span>:<span id="compScore">0</span>
+    </div>
+
+    <div class="result">
+        <p id="resultMessage">Results will go right here!</p>
+    </div>
+
+    <div class="choices">
+        <div id="rock" class="choice">
+            <img id="rockImg" src="images/hand_rock.png" alt="rock">
+        </div>
+        <div id="paper" class="choice">
+            <img id="paperImg" src="images/hand_paper.png" alt="paper">
+        </div>
+        <div id="scissors" class="choice">
+            <img id="scissorsImg" src="images/hand_scissors.png" alt="scissors">
+        </div>
+    </div>
+
+    <div class="prompt">
+        <p>Choose your weapon.</p>
+    </div>
+
+    <!-- <script>
 
         // OLD RPS CODE
 
@@ -89,6 +123,17 @@
 
         // }
 
+        // var computerSelection = computerPlay();
+
+        // var rock = document.querySelector('#rock');
+        // rock.addEventListener('click', playRound('rock', computerPlay()));
+
+        // var paper = document.querySelector('#paper');
+        // paper.addEventListener('click', playRound('paper', computerPlay()));
+
+        // var scissors = document.querySelector('#scissors');
+        // scissors.addEventListener('click', playRound('scissors', computerPlay()));
+
         // function  game() {
         //     let playerScore = 0;
         //     let computerScore = 0;
@@ -117,6 +162,7 @@
         //     }
         //     console.log("Your score: " + playerScore + "\nComputer score: " + computerScore + "\nTies: " + tieScore + "\n" + message);
         // }
-    </script>
+    </script> -->
+    <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>
