@@ -102,19 +102,24 @@ function main() {
 
 main();
 
-function endGame() {
-    if (playerScore === 5 || computerScore === 5) {
-        if (playerScore > computerScore) {
-            return resultMessage.innerHTML = "You have defeated the almighty CPU in a best to 5 contest! Congrats!!!";
-        } else {
-            return resultMessage.innerHTML = "You have BEEN defeated by the almighty CPU overload. Better luck next time.";
-        };
-        reset();
-    };
-};
-
 function reset() {
     playerScore = 0;
     computerScore = 0;
     tieScore = 0;
+
+    userScore.innerHTML = playerScore;
+    compScore.innerHTML = computerScore;
 };
+
+function endGame() {
+    if (playerScore === 5 || computerScore === 5) {
+        if (playerScore > computerScore) {
+            reset();
+            return resultMessage.innerHTML = "You have defeated the almighty CPU in a best to 5 contest! Congrats!!!";
+        } else {
+            reset();
+            return resultMessage.innerHTML = "You have BEEN defeated by the almighty CPU overload. Better luck next time.";
+        };
+    };
+};
+
