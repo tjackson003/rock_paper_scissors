@@ -1,3 +1,5 @@
+    // VARIABLES
+    
     let playerScore = 0;
     let computerScore = 0;
     let tieScore = 0;
@@ -8,7 +10,9 @@
     var userScore = document.getElementById('userScore');
     var compScore = document.getElementById('compScore');
 
-function computerPlay() {
+// FUNCTIONS
+
+    function computerPlay() {
     const choice = ["rock", "paper", "scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 };
